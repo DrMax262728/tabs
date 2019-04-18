@@ -1,20 +1,27 @@
-window.onload = () => {
-    let links = document.querySelectorAll('.tablinks li a');
-    let contents = document.querySelectorAll('.tabcontents div');
+'use strict';
+class CheckTab {
+    constructor(links, contents) {
+        this.links = links; 
+        this.contents = contents;
+    }
+    checkF() {
+        window.onload = () => {
+            
+            for (let [iLink, link] of this.links.entries()) {
+                link.onclick = () => {
+                    for (let [iContent, content] of this.contents.entries()) {
 
-        for (let [iLink, link] of links.entries()) {
-            link.onclick = () => {
-
-                for (let [iContent, content] of contents.entries()) {
-
-                    if (content.classList.contains('show')) {
-                        content.classList.remove('show', 'active');
-                        links[iContent].classList.remove('active');
+                        if (content.classList.contains('show')) {
+                            content.classList.remove('show', 'active');
+                            this.links[iContent].classList.remove('active');
+                        }
                     }
+                    this.contents[iLink].classList.add('show', 'active');
+                    link.classList.add('active');
                 }
-
-                contents[iLink].classList.add('show', 'active');
-                link.classList.add('active');
             }
         }
-};
+    }
+}
+let tab = new CheckTab( document.querySelectorAll('.tablinks li a'), document.querySelectorAll('.tabcontents div') );
+tab.checkF();
