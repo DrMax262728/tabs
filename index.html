@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Test tabs </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <ul class="tablinks nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-tab1" role="tab" aria-controls="pills-tab1" aria-selected="true"> Tab1 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-tab2" role="tab" aria-controls="pills-tab2" aria-selected="false"> Tab2 </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-tab3" role="tab" aria-controls="pills-tab3" aria-selected="false"> Tab3 </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tabcontents tab-content">
+                            <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel" aria-labelledby="pills-1-tab"> Tab1 </div>
+                            <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-2-tab"> Tab2 </div>
+                            <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-3-tab"> Tab3 </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
