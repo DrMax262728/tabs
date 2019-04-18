@@ -1,7 +1,6 @@
-window.onload = function(){
+window.onload = () => {
     let links = document.querySelectorAll('.tablinks li a');
     let contents = document.querySelectorAll('.tabcontents div');
-
 
         for (let [iLink, link] of links.entries()) {
             link.onclick = () => {
